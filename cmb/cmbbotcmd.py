@@ -67,7 +67,7 @@ class CmbBotCommands(Plugin):
                         cmb.logex(e, tag="BREENCAST")
 
             while not self.player.queue.empty():
-                gevent.sleep(0.1).join()
+                gevent.sleep(0.1)
 
             global cont
             cont = False
@@ -78,7 +78,7 @@ class CmbBotCommands(Plugin):
 
             self.player.events.on("STOP_PLAY", mkcont)
             while not cont:
-                gevent.sleep(0.1).join()
+                gevent.sleep(0.1)
 
         self.player.complete.wait()
         del self.player
