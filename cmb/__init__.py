@@ -6,7 +6,7 @@ A Discord bot by Emzi0767. Designed to provide 24/7 Breencast in my guild.
 
 __name__ = "cmb"
 __author__ = "Emzi0767"
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 __license__ = "Apache License 2.0"
 __copyright__ = "Copyright 2017 Emzi0767"
 

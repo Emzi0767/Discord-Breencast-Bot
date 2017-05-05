@@ -69,16 +69,7 @@ class CmbBotCommands(Plugin):
             while not self.player.queue.empty():
                 gevent.sleep(0.1)
 
-            global cont
-            cont = False
-
-            def mkcont():
-                global cont
-                cont = True
-
-            self.player.events.on("STOP_PLAY", mkcont)
-            while not cont:
-                gevent.sleep(0.1)
+            cmb.log("All playbacks finished, {}...".format("restarting queue" if self.playing else "awaiting disconnect"), tag="BREENCAST")
 
         self.player.complete.wait()
         del self.player
